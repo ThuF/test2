@@ -6,7 +6,7 @@ try {
     var statement = connection.prepareStatement("select * from DIRIGIBLE_EXTENSIONS");
     var resultSet = statement.executeQuery();
     while (resultSet.next()) {
-        response.println("[path]: " + resultSet.getString("EXTENSION_LOCATION"));
+        response.println("[path] = " + resultSet.getString("EXTENSION_LOCATION"));
     }
     resultSet.close();
     statement.close();
